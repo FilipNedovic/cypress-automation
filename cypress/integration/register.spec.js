@@ -2,7 +2,7 @@
 
 describe('test register', () => {
 
-    it('register without first name', () => {
+    xit('register without first name', () => {
         cy.visit('/register'); 
         cy.url().should('include', '/register');
         cy.get('#last-name').type('Nedovic');
@@ -13,7 +13,7 @@ describe('test register', () => {
         cy.get('button').click();
         cy.url().should('not.include', '/register');
     })
-    
+
     it('register with valid data', () => {
         cy.visit('/register');
         cy.url().should('include', '/register');
